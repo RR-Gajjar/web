@@ -1,0 +1,313 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+span{
+    color: white;
+    text-transform: uppercase;
+}
+/* Main body styling */
+body {
+    height: 100rem;
+    position: relative;
+    overflow-x: hidden;
+    background-color: #1b263b;
+}
+
+ /* Glowing effect */
+ #cursor-glow {
+    position: absolute;
+    width: 300px; /* Adjust for smaller glow */
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)); 
+    border-radius: 50%;
+    pointer-events: none; /* Ensures it doesn’t interfere with clicks */
+    filter: blur(40px); /* Softens the glow effect */
+    transform: translate(-50%, -50%);
+    transition: transform 0.05s ease-out; /* Smoother movement */
+    z-index: 1000; /* Ensures it appears on top */
+}
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 2px 2px 20px white;
+}
+.header .logo-ctn{
+    width: 25%;
+}
+.header .logo-ctn .logo{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.header .logo-ctn .logo img{
+    background-color: rgb(255, 255, 255);
+    width: 25%;
+    border-radius: 20px;
+}
+.header .name-ctn{
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .name-ctn .name{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 33px;
+    font-weight: 900;
+    text-shadow: 9px 9px 6px white;
+}
+
+
+/***********main************/
+
+.main{
+    margin: 50px;
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+}
+
+.intro-ctn {
+    width: 30%;
+    height: 100%;
+}
+.intro-name{
+    width: 100%;
+    height: 10%;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.intro-par{
+    width: 100%;
+    display: flex; /* Or block, depending on layout */
+    align-items: center; /* Adjust alignment */
+    justify-content: center;
+    height: auto; /* Ensure no fixed height is forcing extra space */
+}
+
+.intro-par .par{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    line-height: 1.2; /* Adjust this value if needed */
+}
+.nav-ctn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+.nav-items {
+    margin: 5px;
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 80px;
+    cursor: pointer;
+    border-radius: 9px;
+    transition: 0.3s;
+}
+.nav-items:hover {
+    background-color: rgba(60, 60, 60, 0.5);
+    font-size: 25px;
+}
+.contact-ctn{
+    width: 100%;
+    height: 8%;
+    margin: 10px 0;
+}
+.contact-ctn .contact-name {
+    width: 100%;
+    height: 40%;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+.contact-ctn .s-m-accounts{
+    margin-left: 12.5%;
+    width: 80%;
+    height: 60%;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+}
+.contact-ctn .s-m-accounts .s-m-logos{
+    width: 80%;
+}
+.contact-ctn .s-m-accounts .s-m-logos:hover{
+    border-radius: 100%;
+    background-color: rgba(130, 130, 130, 0.5);
+    transform: scale(1.1);
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5);
+}
+.navigation-contant{
+    width: 60%;
+}
+.main .line{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 -5%;
+}
+hr{
+    width: 90%;
+    height: 5px;
+    background-color: blue;
+    border: none;
+}
+.main .line .dot{
+    width: 5%;
+    height: 20px;
+    background-color: black;
+    border-radius: 100%;
+}
+.contant-ctn{
+    width: auto;
+    height: auto;
+}
+.contant{
+    display: none;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: inset 2px 2px 5px black , inset -2px -2px 5px black;
+}
+.contant-ctn .contant .contant-h2{
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: inset 2px 2px 5px black , inset -2px -2px 5px black;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 5px;
+    width: 100%;
+    height: 20px;
+    background-color: rgb(120, 120, 120);
+}
+.contant-ctn .contant .contant-par{
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.contant-ctn .contant .contant-skill-list{
+    font-size: 15px;
+    font-weight: 800;
+    margin-left: 10%;
+}
+.box-ctn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.boxes {
+    width: 49%; /* Adjust width to fit two boxes in a row */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.boxes .box {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%; /* Each box takes full width inside its half container */
+    height: 40%;
+    border-radius: 20px;
+    background-color: rgb(108, 108, 108);
+    box-shadow: inset 5px 5px 5px black , inset -5px -5px 5px black;
+}
+.box-ctn .boxes img{
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+}
+.box-ctn .boxes .line{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    margin: 5px 0;
+}
+.box-ctn .boxes .p-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.box-ctn .boxes a{
+    text-decoration: none;
+    color: black;
+}
+.boxes .box:hover {
+    background-color: rgb(130, 130, 130);
+    transform: scale(1.1);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2) , -10px -10px 10px rgba(0, 0, 0, 0.2);
+}
+.box-ctn2 a{
+    text-decoration: none;
+    color: black;
+}
+.box-ctn2 a h1{
+    padding: 8px;
+    margin: 15px 0;
+    width: auto;
+    background-color: rgb(136, 136, 136);
+    text-align: center;
+    align-items: center;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+.box-ctn2 a h1:hover{
+    background-color: rgb(130, 130, 130);
+    transform: scale(1.01);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.show {
+    display: block;
+}
+
+.contant {
+    display: none;
+}
+.contant.show {
+    display: block;
+}
+
+
+/*******footer******/
+
+.footer-ctn {
+    width: 100%;
+    box-shadow: -5px -5px 10px white;
+}
+.exiting-line{
+    width: auto;
+    height: 60%;
+    padding: 10px 0;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.footer-ctn .footer-line{
+    text-align: center;
+}
